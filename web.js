@@ -2,10 +2,15 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-//var fr = require('fs')
+var fs = require('fs');
 
-st = fs.readFileSync('index.html');
-st = buf.toString(st);
+//var buf = require('buf');
+
+
+bf = fs.readFileSync('index.html');
+console.log(bf)
+//console.log(type(bf))
+st = bf.toString();
 
 
 app.get('/', function(request, response) {
